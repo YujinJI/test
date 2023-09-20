@@ -1,0 +1,105 @@
+/* CSS 작성 */
+body {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+header .logo {
+  margin-top: 100px;
+  margin-bottom: 48px;
+}
+
+header .logo .logo-img {
+  display: inline-block;
+}
+
+header .logo img {
+  width: 176px;
+}
+
+.title {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.title .line {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  margin: 0 10px;
+  margin-bottom: 3px;
+}
+
+.title .sub-title {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.item-container {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+.item-container .big-item {
+  width: 502px;
+  height: 310px;
+}
+
+.item-container .small-item {
+  width: 243px;
+  height: 310px;
+}
+
+.item-container a {
+  float: left;
+  margin: 0 16px 16px 0;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid #d6d6d6;
+}
+
+.item-container a:nth-of-type(2),
+.item-container a:nth-of-type(6),
+.item-container a:nth-of-type(9) {
+  margin-right: 0;
+}
+
+.item-container a img {
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.item-container a:hover,
+.item-container a:focus {
+  border: 1px solid var(--color-blue);
+}
+
+.item-container a::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../../assets/icon/angle-right-square.svg);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.2);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.item-container a:hover::after,
+.item-container a:focus::after {
+  content: '구매하기';
+  width: 110px;
+  padding-right: 10px;
+  background-color: var(--color-blue);
+  background-repeat: no-repeat;
+  background-position-x: 80px;
+}

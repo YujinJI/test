@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* 오늘의 쇼핑 제안 */
+body {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 48px;
+}
+.header h1 {
+  margin: 0;
+}
+.header .logo-image {
+  width: 176px;
+  height: 40px;
+}
+
+.offer-item-container .title {
+  width: 234px;
+  height: 30px;
+  position: relative;
+  background-image: url(../../assets/icon/shopping.svg);
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  margin-bottom: 24px;
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+.offer-item-container .item-container {
+  width: 1020px;
+  height: 270px;
+  display: flex;
+}
+.offer-item-container .item-wrap {
+  width: 200px;
+  height: 270px;
+  margin-right: 5px;
+  position: relative;
+}
+.offer-item-container .item-wrap:last-child {
+  margin-right: 0;
+}
+.offer-item-container .item-wrap .badge-discount {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 53px;
+  height: 30px;
+  padding: 3px 10px;
+  background-color: var(--color-red-500);
+  color: var(--color-white);
+  border-radius: 0px 0px 4px 0px;
+}
+.offer-item-container .item-wrap .item-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offer-item-container .item-wrap .item-image-wrap .item-image {
+  width: 160px;
+  height: 160px;
+  margin-top: 14px;
+}
+.offer-item-container .item-wrap .item-info {
+  width: 172px;
+  margin: 0 auto;
+}
+.offer-item-container .item-wrap .item-info .item-title {
+  font-size: 14px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 12px 0;
+}
+.offer-item-container .item-wrap .item-info .badge-rocket {
+  margin-bottom: 4px;
+  width: 55px;
+  height: 16px;
+}
+.offer-item-container .item-wrap .item-info .badge-free {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-700);
+}
+.offer-item-container .item-wrap .item-review-wrap {
+  display: flex;
+  align-items: center;
+  height: 17px;
+}
+.offer-item-container .item-wrap .item-review-wrap .item-review-score-wrap {
+  overflow: hidden;
+  height: 12px;
+  margin-right: 4px;
+}
+.offer-item-container .item-wrap .item-review-wrap .item-review-count {
+  color: var(--color-gray-700);
+  font-size: 14px;
+  font-weight: 400;
+}

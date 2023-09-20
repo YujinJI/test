@@ -1,0 +1,131 @@
+/* 오늘의 쇼핑 제안 */
+@mixin title-medium-24 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@mixin text-regular-14 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin text-medium-14 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+body {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 48px;
+  
+  h1 {
+    margin: 0;
+  }
+
+  .logo-image {
+    width: 176px;
+    height: 40px;
+  }
+}
+
+.offer-item-container {
+  .title {
+    width: 234px;
+    height: 30px;
+    position: relative;
+    background-image: url(../../assets/icon/shopping.svg);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    margin-bottom: 24px;
+    margin-top: 0;
+    @include title-medium-24;
+  }
+
+  .item-container {
+    width: 1020px;
+    height: 270px;
+    display: flex;
+  }
+
+  .item-wrap {
+    width: 200px;
+    height: 270px;
+    margin-right: 5px;
+    position: relative;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .badge-discount {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 53px;
+      height: 30px;
+      padding: 3px 10px;
+      background-color: var(--color-red-500);
+      color: var(--color-white);
+      border-radius: 0px 0px 4px 0px;
+    }
+
+    .item-image-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .item-image {
+        width: 160px;
+        height: 160px;
+        margin-top: 14px;
+      }
+    }
+
+    .item-info {
+      width: 172px;
+      margin: 0 auto;
+      .item-title {
+        @include text-regular-14;
+        @include ellipsis;
+        margin: 12px 0;
+      }
+      .badge-rocket {
+        margin-bottom: 4px;
+        width: 55px;
+        height: 16px;
+      }
+      .badge-free {
+        display: inline-block;
+        margin-bottom: 4px;
+        // font-size: 14px;
+        @include text-medium-14;
+        color: var(--color-gray-700);
+      }
+    }
+
+    .item-review-wrap {
+      display: flex;
+      align-items: center;
+      height: 17px;
+      .item-review-score-wrap {
+        overflow: hidden;
+        height: 12px;
+        margin-right: 4px;
+      }
+      .item-review-count {
+        color: var(--color-gray-700);
+        @include text-regular-14;
+      }
+    }
+  }
+}
